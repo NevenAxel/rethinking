@@ -4,84 +4,105 @@
 			<title>Rethinking Facebook Events</title>
 			<meta charset="UTF-8" />
 			<link rel="stylesheet" href="style.css" />
+			<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,900" rel="stylesheet">
 	</head>
 
 	<body>
 
 		<header>
-			<nav class="container">
-				<ul class="list">
-					<li><a href="#">Contexte</a></li>
-					<li><a href="#">La team</a></li>
+			<nav class="container section--nav">
+				<ul class="nav"> <!-- J'ai changé la class list en class nav on a toujours utilisé nav avec Thronte -->
+					<li class="nav__el"><a href="#">Contexte</a></li>
+					<li class="nav__el"><a href="#">La team</a></li>
 				</ul>
-			</nav>
-		</header>
+			</nav>	
+		
 
-		<!-- Je me suis permis de déjà mettre des classes aux sections. Si tu veux changer hésite pas. Et prépare-toi à une avalanche de commentaires :p -->
+			<section class="container section--title">
+			<h1>Rethinking UX</br><span class="text--light">Facebook Events</span></h1>
 
-		<section class="section--title">
-			<h1>Rethinking UX<span>Facebook Events</span></h1>
-			<!-- Je ne sais pas ici s'il vaut mieux mettre un autre h1, mais ce serait bizarre et un span peut être pas mal car il n'y a que la graisse qui change-->
-		</section> <!-- J'avoue, c'est une petite section, mais ça me semble correct -->
+			</section> <!-- J'avoue, c'est une petite section, mais ça me semble correct -->
 
-		<section class="section--contexte">
-			<h2>Contexte</h2>
-			<p>Rethinking UX est un travail que nous avons réalisé par groupe de 6 étudiants, lors d’un workshop à l’HEAJ. Notre mission pour ce projet ? Analyser et repenser une fonctionnalité de Facebook, afin d’améliorer celle-ci.</p>
-			<p>Lors du choix de la fonctionnalité, nous nous sommes lancé le défi de faire un rethinking des événements Facebook.Au cours de cette semaine d’atelier, nous avons en premier lieu travaillé tous ensemble lors des analyses, mais ensuite notre groupe s’est séparé en 3 binômes. Ce fut un grand moment d’émotion…</p>
-			<p>Chaque binôme avait comme tâche de travailler sur une des sous fonctionnalités. Nous avons ensuite vécu un nouveau déchirement lorsque le travail est devenu individuel. Car dans chaque groupe un des étudiants travaillait la version desktop, tandis que l’autre s’occupait de la version mobile.</p>
+		</header> <!-- J'englobe le titre avec le header ça me semble correct et pour le background c'est pratique-->
+
+		<section class="container section--contexte">
+			<h2 class="title--section">Contexte</h2>
+			<div class="paragraphe paragraphe--context">
+				<p>Rethinking UX est un travail que nous avons réalisé par groupe de 6 étudiants, lors d’un workshop à l’HEAJ. Notre mission pour ce projet ? Analyser et repenser une fonctionnalité de Facebook, afin d’améliorer celle-ci.</p>
+				<p>Lors du choix de la fonctionnalité, nous nous sommes lancé le défi de faire un rethinking des événements Facebook.Au cours de cette semaine d’atelier, nous avons en premier lieu travaillé tous ensemble lors des analyses, mais ensuite notre groupe s’est séparé en 3 binômes. Ce fut un grand moment d’émotion…</p>
+				<p>Chaque binôme avait comme tâche de travailler sur une des sous fonctionnalités. Nous avons ensuite vécu un nouveau déchirement lorsque le travail est devenu individuel. Car dans chaque groupe un des étudiants travaillait la version desktop, tandis que l’autre s’occupait de la version mobile.</p>
+			</div>
 		</section>
 
 		<!-- L'image qui coupe les deux section. On peut la mettre soit en haut de la section team ou en bas du contexte, comme tu le sens :) -->
 
-		<section class="section--team">
-			<h2>La team</h2>
+		<section class="container section--team">
+			<h2 class="title--section">La team</h2>
 			
-			<h3>Les cases study Desktop</h3>
-			<ul>
-				<li>
-					<img src="img/justine.png">
-					<p>Justine Dufrasne</p>
+			<h3 class="text__purple text__purple--desktop">Les cases study Desktop</h3>
+			<ul class="team">
+				<li class="team__el team__el--justine">
+					<a href="#" class="team__img text__purple text__purple--team">
+					<span class="team--span">Création d'évènements</span>
+					<p class="team--name">Justine Dufrasne</p>
+					</a>
 				</li>
-				<li>
-					<img src="img/dorian.png">
-					<p>Dorian Chapelle</p>
+				<li class="team__el team__el--dorian">
+					<a href="#" class="team__img text__purple text__purple--team">
+					<span class="team--span">Page d'acceuil / Discover</span>
+					<p class="team--name">Dorian Chapelle</p>
+					</a>
 				</li>
-				<li>
-					<img src="img/tom.png">
-					<p>Tom Richard</p>
+					<li class="team__el team__el--tom">
+					<a href="#" class="team__img text__purple text__purple--team">
+					<span class="team--span">Gestion d'évènement</span>
+					<p class="team--name">Tom Richard</p>
+					</a>
 				</li>
 			</ul>
 
-			<h3>Les cases study Mobile</h3>
-				<li>
-					<img src="img/jeremie.png">
-					<p>Jéremie Philippe</p>
+			<h3 class="text__purple text__purple--mobile">Les cases study Mobile</h3>
+			<ul class="team">
+				<li class="team__el team__el--jeremie">
+					<a href="#" class="team__img text__purple text__purple--team">
+					<span class="team--span">Création d'évènements</span>
+					<p class="team--name">Jérémie Philippe</p>
+					</a>
 				</li>
-				<li>
-					<img src="img/axel.png">
-					<p>Axel Neven</p>
+				<li class="team__el team__el--axel">
+					<a href="#" class="team__img text__purple text__purple--team">
+					<span class="team--span">Page d'acceuil / Discover</span>
+					<p class="team--name">Axel Neven</p>
+					</a>
 				</li>
-				<li>
-					<img src="img/christelle.png">
-					<p>Christelle Tassin</p>
+					<li class="team__el team__el--christelle">
+					<a href="#" class="team__img text__purple text__purple--team">
+					<span class="team--span">Gestion d'évènement</span>
+					<p class="team--name">Christelle Tassin</p>
+					</a>
 				</li>
 			</ul>
-			<h3>Ca, c'est nous !</h3>
-			<!-- J'arrive pas à faire un ç majuscule comme dans le design -->
+
+
+			<h3 class="text__purple text__purple--us">&Ccedil;a, c'est nous !</h3>
+			<div class="paragraphe paragraphe--center">
 			<p>Six jeunes étudiants, qui apprennent à créer des interfaces web à la Haute Ecole Albert Jacquard de Namur. Chaque jour nous créons avec passion ! Cette fois, le destin nous a réunit pour travailler sur un projet de rethinking que nous vous présentons aujourd’hui.</p>
 			<p>Pour commencer, nous nous sommes présentés et on s’est dit bonjour, parce qu’on est polis. Nous avons ensuite travaillé dur, pendant toute une semaine de tests, d’analyses et de réflexions, sur notre projet. Aujourd’hui nous avons fini par le concrétiser et nous voulons le partager avec vous. Parce que oui, on s’en fout du nom, mais on s’en fout pas du reste !</p>
 		</section>
 
 		<footer>
-			<h3>Un travail réalisé par :</h3>
-			<div>
-				<a href="#" target="blank">Christelle Tassin</a>
-				<a href="http://www.jeremiephilippe.be/projets/vcard/" target="blank">Jérémie Philippe</a>
-				<a href="http://justinedufrasne.be/projets/vcard/" target="blank">Justine Dufrasne</a>
-				<a href="#" target="blank">Dorian Chapelle</a>
-				<a href="#" target="blank">Alex Neven</a>
-				<a href="#" target="blank">Tom Richard</a>
-				<p>For DWM and HEAJ</p>
+			<div class="bg-oblique">
+			</div>
+			<div class="section--footer">
+			<h3 class="title--footer">Un travail réalisé par :</h3>
+			<ul class="nav-footer">
+				<li><a class="nav-footer__el" href="#" target="blank">Christelle Tassin</a></li>
+				<li><a class="nav-footer__el" href="http://www.jeremiephilippe.be/projets/vcard/" target="blank">Jérémie Philippe</a></li>
+				<li><a class="nav-footer__el" href="http://justinedufrasne.be/projets/vcard/" target="blank">Justine Dufrasne</a></li>
+				<li><a class="nav-footer__el" href="#" target="blank">Dorian Chapelle</a></li>
+				<li><a class="nav-footer__el" href="#" target="blank">Axel Neven</a></li>
+				<li><a class="nav-footer__el" href="#" target="blank">Tom Richard</a></li>
+				<p class="fordwm">For DWM<br>and HEAJ</p>
 			</div>
 			<!-- Ici j'avoue que je ne savais pas trop quoi mettre pour les crédits. Et je pense que'il faut un div container pour mettre le for dwm an heaj en float right ou un truc comme ça :) -->
 		</footer>

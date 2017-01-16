@@ -1,0 +1,330 @@
+html {overflow-x:hidden;}
+
+body{
+	font-family: 'Source Sans Pro', sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+header{
+	background: url(img/header.jpg) no-repeat center;
+	background-size: cover;
+	margin: 0;
+	padding: 0;
+	clip-path: polygon(0 0, 100% 0, 100% 72%, 0% 100%);
+
+}
+
+a{
+	text-decoration: none;
+	color: #ffffff;
+}
+
+
+
+/* LAYOUT */
+
+.container{
+	width: 996px;
+	margin: 0 auto;
+	margin-bottom: 230px; /* c'est sensé être l'espace qu'il y a entre les différentes sections, mais il est différent
+	à chaque fois donc là c'est le premier espace (entre la nav et le titre dans le header) */
+	margin-top: 150px;
+}
+
+
+.section--nav{
+	margin-top: 0;
+}
+
+.section--title:before{
+	content: "";
+	background-color: #ffffff;
+	position: absolute;
+	top:-40px; /* ça marche pour positionner la barre blanche au dessus du titre mais c'est dans les négatif il vaut
+	mieux éviter en général, si tu trouves une autre solution qui est mieux hésite pas à changer */
+	width: 100px;
+	height: 7px;
+}
+
+
+.section--title{
+	padding-bottom: 475px;
+	margin-bottom: 0;
+	position: relative; /* permet de placer la barre au dessus du titre*/	
+}
+
+.section--contexte:after{ /* L'image est pas centré j'ai cherché beaucoup mais j'ai rien trouvé */
+	content:"";
+	display: block;
+	background-image: url(img/banner.jpg); 
+	background-color: #4d00d9; /* Couleur exterieur si jamais l'image est trop petite les bords sont de cette 
+	couleur donc la couleur permet de remplir le reste de l'image */
+	width: 100%;
+	height: 265px;
+	position: absolute;
+	left:0;
+}
+
+.section--team{
+margin-top: 575px; /* espace entre les 2 section contexte et team, 
+155 (espace entre le titre et la banner) + 265 (hauteur de la banner) + 40 (espace après le derneir paragraphe de team)
+*/
+
+}	
+
+.section--footer{
+	padding-top: 100px;
+	margin-bottom: 0px;
+	width: 996px;
+	margin: 0 auto;
+	margin-top: 150px;
+	position: relative;
+	height: 0px;
+}
+
+
+.bg-oblique{
+	background: #533ae0; /* Old browsers */
+	background: -moz-linear-gradient(-45deg, #533ae0 0%, #362692 78%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(-45deg, #533ae0 0%,#362692 78%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(135deg, #533ae0 0%,#362692 78%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#533ae0', endColorstr='#362692',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+transform: rotate(5deg);
+overflow-y: hidden;
+width: 120%;
+height: 1000px;
+position: absolute;
+left: -100PX;
+display: block;
+float:left;
+}
+
+
+
+
+
+
+.nav {
+    list-style-type: none;
+    padding: 45px 0 0 0;
+    margin: 0;
+}
+
+.nav__el a{
+	display: inline-block;
+	margin-left: 85px;
+	float: right;
+	height: 30px;
+	padding-top: 10px
+}
+
+.nav__el a:hover, .nav__el a:focus{
+	font-weight: 700;
+	background: url(img/lines.gif) no-repeat;
+	outline:0;
+}
+
+.nav-footer{
+	list-style-type: none;
+	padding: 0;
+	color: #ffffff;
+	float: left;
+}
+
+.nav-footer__el{
+	font-weight: 300;
+	font-size: 23px;
+}
+
+
+.fordwm{
+	font-size:40px;
+	float: right;
+	position: absolute;
+	right: 0;
+	top: 250px;
+	font-weight: 900;
+	color: #a29cd4;
+	text-align: right;
+}
+
+
+
+
+
+/* TITRES ET TEXTES */
+
+.paragraphe--context{
+	margin-bottom: 160px;
+}
+
+.paragraphe > p{
+	font-size: 19px;
+	line-height: 30px;
+	width: 488px;
+	margin-left: 20px;
+	margin-bottom: 40px;
+}
+
+.paragraphe--center > p{
+	margin-left: auto;
+	margin-right: auto;
+
+}
+
+.title--section{
+	padding: 19px 33px 16px 33px;
+	background-color: #533bdb;
+	display: inline-block;
+	text-transform: uppercase;
+	font-size: 26px;
+	color: #ffffff;
+	margin: 0 0 75px 0;
+	position: relative;
+}
+
+.title--section:before{
+	content: "";
+	display: block;
+	position: absolute;
+	background-color: #ffffff;
+	top: 12px;/* ça marche pour positionner la barre blanche au dessus du titre mais c'est dans les négatif il vaut
+	mieux éviter en général, si tu trouves une autre solution qui est mieux hésite pas à changer */
+	width: 42px;
+	height: 5px;
+}
+
+.title--footer{
+	font-size: 36px;
+	color: #ffffff;
+	position: relative;
+}
+
+
+.nav__el a{
+	color: #ffffff;
+	font-size: 16px;
+	font-weight: 400;
+	text-transform: uppercase;
+}
+
+.section--title{
+	color: #ffffff;
+	font-weight: 900; /* la police s'affiche en gras et pas en black ce n'est pas normal */
+	font-size: 50px;
+}
+
+.text--light{
+	font-weight: 300; /* Utilisé pour le span pour mettre facebook events en light*/
+}
+
+/*Ajout Jérémie*/
+
+
+.text__purple{
+	font-size: 30px;
+	text-align: center;
+	color: #533bdb;
+	font-weight: bold;
+}
+
+.text__purple--desktop{
+	margin: 71px 0 120px 0;
+}
+
+.text__purple--mobile{
+	margin: 150px 0 120px 0;
+}
+
+.text__purple--us{
+	margin: 160px 0 40px 0;
+}
+
+.text__purple--team{
+	display: block;
+	margin: 0;
+	padding-top: 20px;
+	font-size: 27px;
+	font-weight: normal;
+	text-align: center;
+}
+
+.team--span{
+	color: white;
+	line-height: 39px;
+	position: absolute;
+	top: 80px;
+	right: 0px;
+	opacity: 0;
+}
+
+.team--name{
+	padding-top: 238px;
+	margin:0;
+}
+
+.team{
+	list-style: none;
+	padding: 0 50px;
+	margin: 0;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+
+.team__el{
+	float: left;
+	margin-right: 90px;
+	display: inline-block;
+	width: 235px;
+	background: url(img/team.png) no-repeat;
+	position: relative;
+}
+
+.team__el:last-child{
+	margin-right: 0;
+}
+
+.team__el--dorian{background-position: -975px 0;}
+
+.team__el--tom{background-position: -488px 0;}
+
+.team__el--jeremie{background-position: -731px 0;}
+
+.team__el--axel{background-position: -243px 0;}
+
+.team__el--christelle{background-position: -1219px 0;}
+
+.link--team{
+	height: 235px;
+	width: 235px;
+	margin: 0;
+	line-height: 235px;
+	background: url(img/team-nb.png) no-repeat;
+}
+
+.team__img{
+	height: 275px;
+	display: block;
+}
+
+.team__el a:hover > span, .team__el a:focus > span{
+	opacity: 1;
+}
+
+.team__el:hover, .team__el:focus{
+	background-position-y: -356px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
