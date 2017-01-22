@@ -11,8 +11,14 @@ header{
 	background-size: cover;
 	margin: 0;
 	padding: 0;
+	height: 900px;
+	-moz-clip-path: polygon(0 0, 100% 0, 100% 72%, 0% 100%);
+	-webkit-clip-path: polygon(0 0, 100% 0, 100% 72%, 0% 100%);
 	clip-path: polygon(0 0, 100% 0, 100% 72%, 0% 100%);
-
+	 background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 a{
@@ -29,7 +35,9 @@ a{
 	margin: 0 auto;
 	margin-bottom: 230px; /* c'est sensé être l'espace qu'il y a entre les différentes sections, mais il est différent
 	à chaque fois donc là c'est le premier espace (entre la nav et le titre dans le header) */
-	margin-top: 150px;
+/*	margin-top: 150px;*/
+	overflow: hidden;
+
 }
 
 
@@ -66,6 +74,10 @@ a{
 	left:0;
 }
 
+.section--contexte{
+	margin-top: 175px;
+}
+
 .section--team{
 margin-top: 575px; /* espace entre les 2 section contexte et team, 
 155 (espace entre le titre et la banner) + 265 (hauteur de la banner) + 40 (espace après le derneir paragraphe de team)
@@ -84,23 +96,40 @@ margin-top: 575px; /* espace entre les 2 section contexte et team,
 }
 
 
+footer {
+
+}
+
 .bg-oblique{
 	background: #533ae0; /* Old browsers */
 	background: -moz-linear-gradient(-45deg, #533ae0 0%, #362692 78%); /* FF3.6-15 */
 	background: -webkit-linear-gradient(-45deg, #533ae0 0%,#362692 78%); /* Chrome10-25,Safari5.1-6 */
 	background: linear-gradient(135deg, #533ae0 0%,#362692 78%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#533ae0', endColorstr='#362692',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	
+/*
+	-o-transform: rotate(5deg);
+	-moz-transform: rotate(5deg);
+	transform: rotate(5deg);*/
 
-transform: rotate(5deg);
-overflow-y: hidden;
-width: 120%;
-height: 1000px;
-position: absolute;
-left: -100PX;
-display: block;
-float:left;
+	width: 120%;
+	height: 650px;
+	position: absolute;
+	
 }
 
+.bg-oblique:before{
+	top: -260px;
+	left: -25%;
+	content: "";
+	display: block;
+	height: 50%;
+	width: 150%;
+	transform: rotate(3deg);
+	transform-origin: 3% 0;
+	background: inherit;
+	position: absolute;
+	z-index: -1;
+}
 
 
 
@@ -110,12 +139,18 @@ float:left;
     list-style-type: none;
     padding: 45px 0 0 0;
     margin: 0;
+    float: right;
 }
 
+.nav__el {
+	float: left;
+	margin-left: 75px;
+}
 .nav__el a{
-	display: inline-block;
-	margin-left: 85px;
-	float: right;
+	display: block;
+	
+	width: 80px;	
+	text-align: left;
 	height: 30px;
 	padding-top: 10px
 }
@@ -126,18 +161,21 @@ float:left;
 	outline:0;
 }
 
-.nav-footer{
+.nav--footer{
 	list-style-type: none;
 	padding: 0;
 	color: #ffffff;
 	float: left;
 }
 
-.nav-footer__el{
+.nav--footer__el{
 	font-weight: 300;
 	font-size: 23px;
 }
 
+.nav--footer a:hover{
+	font-weight: bold;
+}
 
 .fordwm{
 	font-size:40px;
@@ -213,15 +251,20 @@ float:left;
 .section--title{
 	color: #ffffff;
 	font-weight: 900; /* la police s'affiche en gras et pas en black ce n'est pas normal */
-	font-size: 50px;
+	font-size: 70px;/*ajuster*/
+	margin-top: 300px;
+	float: left;
+
 }
 
 .text--light{
 	font-weight: 300; /* Utilisé pour le span pour mettre facebook events en light*/
 }
 
-/*Ajout Jérémie*/
 
+
+
+/*Section Team*/
 
 .text__purple{
 	font-size: 30px;
@@ -276,7 +319,7 @@ float:left;
 .team__el{
 	float: left;
 	margin-right: 90px;
-	display: inline-block;
+	
 	width: 235px;
 	background: url(img/team.png) no-repeat;
 	position: relative;
@@ -302,6 +345,7 @@ float:left;
 	margin: 0;
 	line-height: 235px;
 	background: url(img/team-nb.png) no-repeat;
+/*	transition: all 0.3s ease 0s;*/
 }
 
 .team__img{
